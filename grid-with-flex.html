@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid with flexbox</title>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1.5fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 10px;
+            height: 100vh;
+        }
+        .item{
+            background-color: blueviolet;
+            font-size: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .cowboy{
+            background-color: aqua;
+            grid-column: span 2;
+        }
+        .astronaut{
+            order: 1;
+            background-color: #03989E;
+            grid-column: span 2;
+        }
+        .book{
+            grid-row: span 2;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item cowboy">🤠</div>
+        <div class="item astronaut">👨‍🚀</div>
+        <div class="item book">📖</div>
+    </div>
+</body>
+</html>
