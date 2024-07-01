@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Sizing Example</title>
+    <style>
+        .grid-container > * {
+            background-color: seagreen;
+            padding: 20px;
+            font-size: 18px;
+            color: white;
+            border: 2px solid white;
+
+            
+        }
+        .grid-container {
+            background-color: #ddd;
+            padding: 20px;
+            margin: 2rem;
+            width: 80%; 
+            display: grid;
+            grid-template-columns: auto 400px minmax(200px, 500px);
+            grid-template-rows: 1fr 1fr 2fr;
+            grid-auto-rows: 50px;
+            }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div>width expands to fill space</div>
+        <div>400px wide</div>
+        <div>min 200px max 500px wide</div>
+        <div>width expands to fill space</div>
+        <div>400px wide</div>
+        <div>min 200px max 500px wide</div>
+        <div>width expands to fill space</div>
+        <div>400px wide</div>
+        <div>min 200px max 500px wide</div>
+        <div>50px high</div>
+    </div>
+    
+</body>
+</html>
